@@ -28,6 +28,3 @@ def get_weather_data():
     weather_data = fetch_weather_data()
     # Return the list of dictionaries as JSON
     return jsonify(weather_data)
-
-if __name__ == '__main__':
-    app.run(debug=True)
