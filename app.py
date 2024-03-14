@@ -9,7 +9,7 @@ CORS(app)
 
 def fetch_weather_data():
     try:
-        conn = psycopg2.connect(os.getenv('"postgresql://postgres:SrtAres1904@localhost/Assignment"'))
+        conn = psycopg2.connect(os.getenv('DATABASE_URL'))
         cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
         cursor.execute("SELECT * FROM open_weather ORDER BY ID DESC")
         data = cursor.fetchall()
