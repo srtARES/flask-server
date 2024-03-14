@@ -1,10 +1,8 @@
 from flask import Flask, jsonify
-from flask_cors import CORS
 import psycopg2
 import psycopg2.extras
 
 app = Flask(__name__)
-CORS(app)
 
 def fetch_weather_data():
     try:
